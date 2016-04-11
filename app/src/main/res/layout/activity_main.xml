@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin"
         android:enabled="false"
-        android:text="@string/show_result"/>
+        android:text="@string/showResult"/>
 
     <TextView
         android:id="@+id/resultText"

@@ -59,9 +59,7 @@ public class MainActivity extends BaseActivity {
         addSubscription(getUsersSubscription);
 
         Subscription clickSubscription = RxView.clicks(vShowResultButton).subscribe(click -> {
-            String resultText = "Users count in database = %1$d\n" +
-                    "User with serverId = 1 existing in database = %2$b\n" +
-                    "User with serverId = 1 toString\n%3$s";
+            String resultText = getString(R.string.resultText);
             int usersCount = dbManager.getCountOfUsers();
             boolean isSomeUserExist = dbManager.isUserExist(1);
             String userToString = "";

@@ -13,20 +13,20 @@ import javax.inject.Inject;
 public class MainActivity extends BaseActivity {
 
     @Inject
-    DbManager dbManager;
+    DbManager mDbManager;
     @Inject
-    ApiManager apiManager;
+    ApiManager mApiManager;
     @Inject
-    SharedPrefsManager sharedPrefsManager;
+    SharedPrefsManager mSharedPrefsManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dbManager.helloDb();
-        apiManager.helloApi();
-        sharedPrefsManager.helloSharedPrefs();
+        mDbManager.helloDb();
+        mApiManager.helloApi();
+        mSharedPrefsManager.helloSharedPrefs();
     }
 
     @Override

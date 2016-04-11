@@ -1,6 +1,7 @@
 # BaseComponents
 
 This is a template project for android application based on Dagger2, SQLBrite, Retrofit2 etc.
+In 'sample' branch you can see an example of using this template.
 
 ## Template contains a set of required components:
 

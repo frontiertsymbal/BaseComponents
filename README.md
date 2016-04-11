@@ -14,7 +14,7 @@ SharedPrefsManager
 
 * RetroLambda v3.2.5
 
-* RxJava v1.1.*0
+* RxJava v1.1.0
 * RxAndroid v1.1.0
 * RxBinding v0.4.0
 

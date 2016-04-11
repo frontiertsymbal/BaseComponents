@@ -1,12 +1,12 @@
 # BaseComponents
 
-This is a template project for android application based on Dagger2, SQLBrite, Retrofit2
+This is a template project for android application based on Dagger2, SQLBrite, Retrofit2 etc.
 
-Template contains a set of required components:
+## Template contains a set of required components:
 
-ApiManager
-DbManager
-SharedPrefsManager
+* ApiManager
+* DbManager
+* SharedPrefsManager
 
 ## Libs:
 

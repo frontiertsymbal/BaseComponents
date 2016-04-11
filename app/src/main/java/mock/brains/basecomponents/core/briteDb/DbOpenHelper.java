@@ -6,6 +6,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import javax.inject.Singleton;
 
+import mock.brains.basecomponents.core.model.Address;
+import mock.brains.basecomponents.core.model.Company;
+import mock.brains.basecomponents.core.model.Geo;
+import mock.brains.basecomponents.core.model.User;
 import timber.log.Timber;
 
 @Singleton
@@ -17,8 +21,10 @@ public class DbOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // TODO AlexTsymbal: add CREATE_TABLE sql strings
-        //createTable(db, SomeEntity.CREATE_TABLE);
+        createTable(db, User.CREATE_TABLE);
+        createTable(db, Company.CREATE_TABLE);
+        createTable(db, Address.CREATE_TABLE);
+        createTable(db, Geo.CREATE_TABLE);
     }
 
     @Override
@@ -30,8 +36,10 @@ public class DbOpenHelper extends SQLiteOpenHelper {
     public void destroyDB(SQLiteDatabase db) {
         try {
             db.beginTransaction();
-            // TODO AlexTsymbal: add TABLEs for destroy DB
-            //db.execSQL(Db.DROP_TABLE_IF_EXIST + SomeEntity.TABLE);
+            db.execSQL(Db.DROP_TABLE_IF_EXIST + User.TABLE);
+            db.execSQL(Db.DROP_TABLE_IF_EXIST + Company.TABLE);
+            db.execSQL(Db.DROP_TABLE_IF_EXIST + Address.TABLE);
+            db.execSQL(Db.DROP_TABLE_IF_EXIST + Geo.TABLE);
             db.setTransactionSuccessful();
         } catch (Exception e) {
             Timber.e(e, "destroyDB error");

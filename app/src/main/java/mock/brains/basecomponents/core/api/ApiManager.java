@@ -1,6 +1,7 @@
 package mock.brains.basecomponents.core.api;
 
-import timber.log.Timber;
+import mock.brains.basecomponents.core.model.User;
+import rx.Observable;
 
 public class ApiManager {
 
@@ -12,10 +13,8 @@ public class ApiManager {
 
     //****************************************************************************************************************************************************************************//
 
-    // TODO AlexTsymbal: implement methods for work with API
-
-    //Sample method
-    public void helloApi() {
-        Timber.e("ApiInterface enabled = %1$s", String.valueOf(apiInterface != null));
+    public Observable<User> getUsers() {
+        return apiInterface.getUserList()
+                .flatMap(Observable::from);
     }
 }

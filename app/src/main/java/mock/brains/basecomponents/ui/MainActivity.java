@@ -25,13 +25,14 @@ import timber.log.Timber;
 public class MainActivity extends BaseActivity {
 
     @Inject
-    DbManager dbManager;
+    DbManager mDbManager;
     @Inject
     ApiManager apiManager;
     @Bind(R.id.showResult)
     Button vShowResultButton;
     @Bind(R.id.resultText)
     TextView vResultText;
+    ApiManager mApiManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +46,8 @@ public class MainActivity extends BaseActivity {
 
         Subscription getUsersSubscription = userObservable.subscribe(
                 user -> {
-                    if (!dbManager.isUserExist(user.getUserId())) {
-                        dbManager.addUser(user);
+                    if (!mDbManager.isUserExist(user.getUserId())) {
+                        mDbManager.addUser(user);
                     }
                 },
                 e -> Timber.e(e, "GetUserError"),
@@ -60,11 +61,11 @@ public class MainActivity extends BaseActivity {
 
         Subscription clickSubscription = RxView.clicks(vShowResultButton).subscribe(click -> {
             String resultText = getString(R.string.resultText);
-            int usersCount = dbManager.getCountOfUsers();
-            boolean isSomeUserExist = dbManager.isUserExist(1);
+            int usersCount = mDbManager.getCountOfUsers();
+            boolean isSomeUserExist = mDbManager.isUserExist(1);
             String userToString = "";
             if (isSomeUserExist) {
-                User someUser = dbManager.getUser(1, Db.COL_ID);
+                User someUser = mDbManager.getUser(1, Db.COL_ID);
                 userToString = someUser.toString();
             }
             vResultText.setText(String.format(resultText, usersCount, isSomeUserExist, userToString));

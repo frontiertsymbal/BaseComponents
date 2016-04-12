@@ -27,12 +27,11 @@ public class MainActivity extends BaseActivity {
     @Inject
     DbManager mDbManager;
     @Inject
-    ApiManager apiManager;
+    ApiManager mApiManager;
     @Bind(R.id.showResult)
     Button vShowResultButton;
     @Bind(R.id.resultText)
     TextView vResultText;
-    ApiManager mApiManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +39,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        Observable<User> userObservable = apiManager.getUsers()
+        Observable<User> userObservable = mApiManager.getUsers()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
 

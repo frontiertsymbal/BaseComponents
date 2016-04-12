@@ -2,6 +2,9 @@ package mock.brains.basecomponents.core.di.component;
 
 import android.app.Application;
 
+import javax.inject.Singleton;
+
+import dagger.Component;
 import mock.brains.basecomponents.core.SharedPrefsManager;
 import mock.brains.basecomponents.core.api.ApiManager;
 import mock.brains.basecomponents.core.briteDb.DbManager;
@@ -10,10 +13,6 @@ import mock.brains.basecomponents.core.di.module.AppModule;
 import mock.brains.basecomponents.core.di.module.DbModule;
 import mock.brains.basecomponents.core.di.module.SharedPrefsModule;
 import mock.brains.basecomponents.ui.MainActivity;
-
-import javax.inject.Singleton;
-
-import dagger.Component;
 
 @Singleton
 @Component(modules = {
@@ -26,12 +25,11 @@ public interface AppComponent {
 
     void inject(Application application);
 
+    // TODO AlexTsymbal: need to add all activity, where injection modules you want
     void inject(MainActivity activity);
 
     SharedPrefsManager sharedPrefsManager();
-
     DbManager dbManager();
-
     ApiManager apiManager();
 }
 

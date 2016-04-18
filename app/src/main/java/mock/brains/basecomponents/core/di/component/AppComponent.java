@@ -6,10 +6,10 @@ import javax.inject.Singleton;
 
 import dagger.Component;
 import mock.brains.basecomponents.core.ApiKeyStoreManager;
+
 import mock.brains.basecomponents.core.SharedPrefsManager;
 import mock.brains.basecomponents.core.api.ApiManager;
 import mock.brains.basecomponents.core.briteDb.DbManager;
-import mock.brains.basecomponents.core.di.module.ApiKeyStoreModule;
 import mock.brains.basecomponents.core.di.module.ApiModule;
 import mock.brains.basecomponents.core.di.module.AppModule;
 import mock.brains.basecomponents.core.di.module.DbModule;
@@ -21,13 +21,13 @@ import mock.brains.basecomponents.ui.MainActivity;
         AppModule.class,
         DbModule.class,
         ApiModule.class,
-        SharedPrefsModule.class,
-        ApiKeyStoreModule.class
+        SharedPrefsModule.class
 })
 public interface AppComponent {
 
     void inject(Application application);
 
+    // TODO AlexTsymbal: need to add all activity, where injection modules you want
     void inject(MainActivity activity);
 
     SharedPrefsManager sharedPrefsManager();

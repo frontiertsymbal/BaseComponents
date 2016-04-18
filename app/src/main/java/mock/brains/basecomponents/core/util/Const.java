@@ -2,6 +2,7 @@ package mock.brains.basecomponents.core.util;
 
 public class Const {
 
+    // TODO AlexTsymbal: Change this values to configure your project
     public static final String SHARED_PREFERENCES_NAME = "BaseComponentsSharedPreferences";
 
     public static final String DB_NAME = "BaseComponentsDb";

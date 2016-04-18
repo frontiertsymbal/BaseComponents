@@ -12,6 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import mock.brains.basecomponents.R;
 import mock.brains.basecomponents.core.api.ApiManager;
+import mock.brains.basecomponents.core.briteDb.Db;
 import mock.brains.basecomponents.core.briteDb.DbManager;
 import mock.brains.basecomponents.core.di.InjectHelper;
 import mock.brains.basecomponents.core.model.User;

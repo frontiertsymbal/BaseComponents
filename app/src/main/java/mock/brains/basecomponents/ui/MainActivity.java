@@ -6,15 +6,10 @@ import android.widget.TextView;
 
 import com.jakewharton.rxbinding.view.RxView;
 
-import javax.inject.Inject;
-
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import mock.brains.basecomponents.R;
-import mock.brains.basecomponents.core.api.ApiManager;
 import mock.brains.basecomponents.core.briteDb.Db;
-import mock.brains.basecomponents.core.briteDb.DbManager;
-import mock.brains.basecomponents.core.di.InjectHelper;
 import mock.brains.basecomponents.core.model.User;
 import rx.Observable;
 import rx.Subscription;
@@ -24,13 +19,9 @@ import timber.log.Timber;
 
 public class MainActivity extends BaseActivity {
 
-    @Inject
-    DbManager mDbManager;
-    @Inject
-    ApiManager mApiManager;
-    @Bind(R.id.showResult)
+    @BindView(R.id.showResult)
     Button vShowResultButton;
-    @Bind(R.id.resultText)
+    @BindView(R.id.resultText)
     TextView vResultText;
 
     @Override
@@ -71,7 +62,5 @@ public class MainActivity extends BaseActivity {
         });
 
         addSubscription(clickSubscription);
-
     }
-
 }

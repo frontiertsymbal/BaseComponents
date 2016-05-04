@@ -14,7 +14,7 @@ import mock.brains.basecomponents.core.util.Const;
 
 public class InjectHelper {
 
-    public static AppComponent getAppComponent(Context context) {
+    public static AppComponent buildAppComponent(Context context) {
         return DaggerAppComponent.builder()
                 .appModule(new AppModule(context))
                 .sharedPrefsModule(new SharedPrefsModule(Const.SHARED_PREFERENCES_NAME))

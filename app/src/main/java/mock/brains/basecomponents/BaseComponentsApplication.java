@@ -4,7 +4,6 @@ import android.app.Application;
 
 import mock.brains.basecomponents.core.di.InjectHelper;
 import mock.brains.basecomponents.core.di.component.AppComponent;
-
 import timber.log.Timber;
 
 public class BaseComponentsApplication extends Application {
@@ -22,7 +21,7 @@ public class BaseComponentsApplication extends Application {
     }
 
     private void initInjector() {
-        appComponent = InjectHelper.getAppComponent(this);
+        appComponent = InjectHelper.buildAppComponent(this);
         appComponent.inject(this);
     }
 

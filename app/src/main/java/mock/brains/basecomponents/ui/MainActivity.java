@@ -74,8 +74,4 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void initDiComponent() {
-        InjectHelper.getAppComponent(this).inject(this);
-    }
 }

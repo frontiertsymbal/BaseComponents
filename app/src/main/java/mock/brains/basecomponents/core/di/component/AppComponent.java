@@ -9,6 +9,7 @@ import mock.brains.basecomponents.core.ApiKeyStoreManager;
 import mock.brains.basecomponents.core.SharedPrefsManager;
 import mock.brains.basecomponents.core.api.ApiManager;
 import mock.brains.basecomponents.core.briteDb.DbManager;
+import mock.brains.basecomponents.core.di.module.ApiKeyStoreModule;
 import mock.brains.basecomponents.core.di.module.ApiModule;
 import mock.brains.basecomponents.core.di.module.AppModule;
 import mock.brains.basecomponents.core.di.module.DbModule;
@@ -20,7 +21,8 @@ import mock.brains.basecomponents.ui.BaseActivity;
         AppModule.class,
         DbModule.class,
         ApiModule.class,
-        SharedPrefsModule.class
+        SharedPrefsModule.class,
+        ApiKeyStoreModule.class
 })
 public interface AppComponent {
 

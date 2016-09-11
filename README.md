@@ -9,22 +9,26 @@ In 'sample' branch you can see an example of using this template.
 * DbManager
 * SharedPrefsManager
 
+## Utils:
+
+* RxPermissions
+* Collection of utils (**in progress**)
+
 ## Libs:
 
-* SQLBrite v0.6.3
+* SQLBrite v0.7.0
 * RetroLambda v3.2.5
-* RxJava v1.1.3
-* RxAndroid v1.1.0
+* RxJava v1.1.6
+* RxAndroid v1.2.1
 * RxBinding v0.4.0
-* Dagger2-compiler v2.2
-* Dagger2 v2.2
+* Dagger2-compiler v2.6.1
+* Dagger2 v2.6.1
 * JavaxAnnotations v10.-b28
-* Retrofit2RxAdapter v2.0.2
-* Retrofit2GsonConverter v2.0.2
-* Retrofit2 v2.0.2
-* OkHttp3 v3.2.0
-* OkHttpLoggingInterceptor v3.0.1
-* ButterKnife v8.0.1
+* Retrofit2RxAdapter v2.1.0
+* Retrofit2GsonConverter v2.1.0
+* Retrofit2 v2.1.0
+* OkHttp3 v3.4.1
+* OkHttpLoggingInterceptor v3.4.1
+* ButterKnife v8.4.0
 * ButterKnife-compiler v8.0.1
-* Timber v4.2.1
-
+* Timber v4.3.0

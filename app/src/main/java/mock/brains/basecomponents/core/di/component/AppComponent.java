@@ -13,7 +13,9 @@ import mock.brains.basecomponents.core.di.module.ApiKeyStoreModule;
 import mock.brains.basecomponents.core.di.module.ApiModule;
 import mock.brains.basecomponents.core.di.module.AppModule;
 import mock.brains.basecomponents.core.di.module.DbModule;
+import mock.brains.basecomponents.core.di.module.PermissionModule;
 import mock.brains.basecomponents.core.di.module.SharedPrefsModule;
+import mock.brains.basecomponents.core.rx.PermissionsManager;
 import mock.brains.basecomponents.ui.BaseActivity;
 
 @Singleton
@@ -22,7 +24,8 @@ import mock.brains.basecomponents.ui.BaseActivity;
         DbModule.class,
         ApiModule.class,
         SharedPrefsModule.class,
-        ApiKeyStoreModule.class
+        ApiKeyStoreModule.class,
+        PermissionModule.class
 })
 public interface AppComponent {
 
@@ -37,5 +40,7 @@ public interface AppComponent {
     ApiManager apiManager();
 
     ApiKeyStoreManager apiKeyStoreManager();
+
+    PermissionsManager permissionManager();
 }
 
